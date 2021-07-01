@@ -1,0 +1,175 @@
+.navBar {
+    height: 18vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgb(248, 249, 250);
+    background: linear-gradient(0deg, rgba(248, 249, 250, 0) 0%, rgba(248, 249, 250, 0.88) 10%, rgba(233, 236, 239, 0.9) 30%, rgba(222, 226, 230, 1) 99%);
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.navLogo {
+    display: flex;
+    align-items: center;
+    margin: 1em 1rem;
+    height: 70%;
+    max-width: 180px;
+    z-index: 200;
+    .logoImg {
+        max-height: 5em;
+        width: 100%;
+        border-radius: 15px;
+        height: auto;
+        border: 2px black solid;
+    }
+}
+
+.navButtons {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    .navbar__list {
+        padding: 1em;
+        list-style-type: none;
+    }
+    .navbar__item {
+        display: inline-block;
+        padding: 0.3em 0.9rem;
+        margin: 0.5em;
+        box-shadow: -0.2em 0.3rem 5px gray;
+        border-radius: 10px;
+        background-color: #DEE2E6;
+        .navbar__link {
+            color: #212529;
+            font-size: 1.1em;
+            text-decoration: none;
+        }
+        &:hover {
+            background-color: #CED4DA;
+        }
+    }
+}
+
+#mobileMenu {
+    input {
+        opacity: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .hamIcon {
+        display: none;
+    }
+    .navButtons {
+        li {
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navLogo {
+        margin: 0 auto;
+    }
+    #mobileMenu {
+        input {
+            display: block;
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            top: 2.5em;
+            right: 1.8rem;
+            cursor: pointer;
+            z-index: 1300;
+            background-color: gray;
+            &:checked {
+                ~ {
+                    .hamIcon {
+                        span {
+                            opacity: 1;
+                            transform: rotate(-45deg) translate(3px, 1px);
+                            background: #232323;
+                            &:nth-last-child(2) {
+                                transform: rotate(45deg) translate(-5px, -11px);
+                            }
+                            &:nth-last-child(3) {
+                                opacity: 0;
+                                transform: rotate(0deg) scale(0.2, 0.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .hamIcon {
+        height: 40px;
+        width: 40px;
+        position: fixed;
+        top: 2.5em;
+        right: 1.8rem;
+        z-index: 1000;
+        background-color: #DEE2E6;
+        border-radius: 5px;
+        border-bottom: 3px inset gray;
+        border-right: 3px inset gray;
+        span {
+            display: block;
+            width: 33px;
+            height: 4px;
+            margin: 0.3em auto 0.5em auto;
+            background: black;
+            border-radius: 15px;
+            z-index: 1000;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+            &:first-child {
+                transform-origin: 0% 0%;
+            }
+            &:nth-last-child(2) {
+                transform-origin: 0% 100%;
+            }
+        }
+    }
+    .navButtons {
+        ul {
+            height: 100%;
+            position: fixed;
+            top: 0;
+            padding-top: 20vh;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #DEE2E6;
+            list-style-type: none;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            li {
+                display: block;
+                padding: 1.3em 0 0.5em 0;
+                border-bottom: 3px inset gray;
+                border-radius: 15px 15px 0px 0px;
+                background-color: #f8f9faff;
+                margin: 5vh 35%;
+                text-align: center;
+            }
+        }
+        input {
+            &:checked {
+                ~ {
+                    ul {
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+}

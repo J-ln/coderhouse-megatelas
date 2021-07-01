@@ -1,0 +1,74 @@
+.block__pcontact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    .pcontact__header {
+        margin: 0 auto;
+        .pcontact__h1 {
+            color: $color6;
+            background-color: $color3;
+            font-size: 3rem;
+            padding: 0.2em 1rem;
+            z-index: 10;
+            border-radius: 15px;
+            border: 4px $color5 groove;
+        }
+    }
+    .pcontact__csocials {
+        width: 70%;
+        height: auto;
+        .csocials__list {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            text-align: center;
+            width: 70%;
+            margin: 7vh auto;
+            padding: 2em 0;
+            border-radius: 15px;
+            background-color: $color4;
+        }
+        .csocial__link {
+            text-decoration: none;
+        }
+        .csocials__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5em 1rem;
+            margin: 2em 7rem;
+            border: 1px groove black;
+            border-radius: 15px;
+            background-color: $color5;
+            &.facebookbtn:hover {
+                background-color: #4267B2;
+                box-shadow: .1em .1rem 6px black;
+            }
+            &.whatsappbtn:hover {
+                background-color: #25D366;
+                box-shadow: .1em .1rem 6px black;
+            }
+            &.emailbtn:hover {
+                background-color: #DB4437;
+                box-shadow: .1em .1rem 6px black;
+            }
+        }
+        .csocials__image {
+            max-width: 80px;
+            background-color: #DEE2E6;
+            padding: 0.5em;
+            border: 5px outset lightslategrey;
+            border-radius: 15px;
+        }
+        .csocials__p {
+            height: 100%;
+            width: 50%;
+            color: white;
+            font-size: 1.4rem;
+            letter-spacing: 0.1rem;
+        }
+    }
+}

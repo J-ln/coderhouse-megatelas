@@ -1,0 +1,72 @@
+.block__psucur {
+    display: grid;
+    grid-template-areas: "header header header header" "image image info info" "map map map map";
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: auto;
+    row-gap: 7vh;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    .psucur__header {
+        grid-area: header;
+        .psucur__h1 {
+            color: $color6;
+            background-color: $color3;
+            font-size: 3rem;
+            padding: 0.2em 1rem;
+            z-index: 10;
+            border-radius: 15px;
+            border: 4px $color5 groove;
+        }
+    }
+    .psucur__imagec {
+        grid-area: image;
+        width: 100%;
+        height: 70vh;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        overflow: hidden;
+        .psucur__image {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .psucur__info {
+        grid-area: info;
+        width: 100%;
+        text-align: center;
+        padding: 1em 4rem;
+        height: 70vh;
+        padding: 7em 6rem;
+        column-gap: 0;
+        border-radius: 0 15px 15px 0;
+        .psucur__h3 {
+            font-size: 24px;
+            line-height: 5em;
+        }
+        .psucur__p {
+            font-size: 20px;
+            line-height: 3em;
+        }
+    }
+    .psucur__map {
+        grid-area: map;
+        height: 80vh;
+        width: 70%;
+        border-radius: 15px;
+        border: 10px groove #343A40;
+        .psucur__iframe {
+            display: block;
+            width: 90%;
+            height: 90%;
+            border: 3px;
+            margin: 1.5em auto;
+            border-radius: 15px;
+            border: 4px solid black;
+        }
+    }
+}

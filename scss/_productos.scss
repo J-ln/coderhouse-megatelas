@@ -1,0 +1,50 @@
+.block__pproducts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .pproducts__header {
+        margin: 0 auto;
+        .pproducts__h1 {
+            color: $color6;
+            background-color: $color3;
+            font-size: 3rem;
+            padding: 0.2em 1rem;
+            z-index: 10;
+            border-radius: 15px;
+            border: 4px $color5 groove;
+        }
+    }
+    .pproducts__pcard {
+        @include card;
+        margin: 7vh auto 3.5vh;
+        .pcard__imagec {
+            width: 60%;
+            height: 100%;
+            .pcard__image {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .pcard__text {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            height: 100%;
+            text-align: center;
+            justify-content: center;
+            padding: 0 2rem;
+            flex-wrap: wrap;
+            .pcard__h3 {
+                @include pname;
+            }
+            .pcard__p {
+                @include pdesc;
+            }
+        }
+        &.pproducts__pcard--reverse {
+            flex-direction: row-reverse;
+        }
+    }
+}
