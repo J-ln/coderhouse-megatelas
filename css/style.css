@@ -742,8 +742,10 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1rem;
   border-radius: 0 0 15px 15px;
   overflow: hidden;
+  background-color: #ADB5BD;
 }
 
 .block__pgalery .pgalery__gcard .gcard__imagec .gcard__image {
@@ -758,6 +760,7 @@ footer {
   border-radius: 0 0 15px 15px;
   margin-bottom: -1.5em;
   opacity: .93;
+  background-color: #DEE2E6;
 }
 
 .block__pgalery .pgalery__gcard .gcard__text .gcard__p {

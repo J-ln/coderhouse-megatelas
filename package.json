@@ -1,0 +1,22 @@
+{
+  "name": "coderhouse-megatelas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-ln/coderhouse-megatelas.git"
+  },
+  "author": "Julian Rolon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/J-ln/coderhouse-megatelas/issues"
+  },
+  "homepage": "https://github.com/J-ln/coderhouse-megatelas#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.2"
+  }
+}
