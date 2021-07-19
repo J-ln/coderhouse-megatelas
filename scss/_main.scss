@@ -1,11 +1,13 @@
-@import "variables";
 .hero__container {
     width: 100%;
     height: auto;
-    padding: 5vh 0;
     display: grid;
+    padding-bottom: 7vh;
     grid-template-columns: 2fr 2fr 2fr 2fr;
     grid-template-areas: ". . header header" "image image image image" "desc desc desc desc";
+    @media (max-width: 720px) {
+        grid-template-areas: ". header header ." "image image image image" "desc desc desc desc";
+    }
     .hero__header {
         grid-area: header;
         margin: 0 auto;
@@ -29,7 +31,7 @@
         overflow: hidden;
         .hero__img {
             width: 100%;
-            height: 100%
+            height: 100%;
         }
     }
     .hero__text {
@@ -39,6 +41,7 @@
         padding: 1.5em 3em;
         border-radius: 15px;
         box-shadow: 0.1em 0.2rem 0.3rem gray;
+        background-color: $color2;
         .hero__p {
             font-size: 1rem;
             text-align: center;
@@ -55,7 +58,10 @@
     grid-template-areas: "header header . ." "card card card card";
     .hproducts__header {
         grid-area: header;
-        margin: 0 auto 10vh;
+        margin: 0 auto;
+        @media (max-width: 720px) {
+            margin-left: 2rem;
+        }
         .hproducts__h3 {
             color: $color1;
             background-color: $color5;
@@ -67,32 +73,63 @@
             padding: 0.2em 1rem;
         }
     }
-    .hproducts__card {
-        @include card;
+    .hproducts__slide {
         grid-area: card;
+        height: auto;
+        width: 90%;
+        padding: 7vh 0;
         margin: 0 auto;
-        .hproducts__imagec {
-            height: 100%;
-            width: 60%;
-            padding: 0;
-            .hproducts__img {
-                width: 100%;
-                height: 100%;
+        .carousel-inner {
+            padding: 1em;
+            .hproducts__card {
+                @include card;
+                margin: 0 auto 0 auto;
+                .hproducts__imagec {
+                    height: 100%;
+                    width: 60%;
+                    padding: 0;
+                    .hproducts__img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .hproducts__text {
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1.5em 1.5rem;
+                    .hproducts__name {
+                        @include pname;
+                    }
+                    .hproducts__desc {
+                        @include pdesc;
+                    }
+                }
+            }
+            @media (max-width: 720px) {
+                .hproducts__card {
+                    flex-direction: column;
+                    .hproducts__imagec {
+                        width: 100%;
+                    }
+                    .hproducts__text {
+                        width: 100%;
+                    }
+                }
             }
         }
-        .hproducts__text {
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5em 1.5rem;
-            .hproducts__name {
-                @include pname;
-            }
-            .hproducts__desc {
-                @include pdesc;
+        .carousel-control-next,
+        .carousel-control-prev {
+            background-color: $color5;
+            width: 5rem;
+            height: 80%;
+            border-radius: 10px;
+            margin: auto auto;
+            @media (max-width: 720px) {
+                width: 40px;
             }
         }
     }
@@ -106,7 +143,6 @@
     grid-template-columns: 2fr 2fr 2fr 2fr;
     grid-template-areas: ". header header ." "img img img img";
     .hmarcas__header {
-        margin: 0 auto;
         grid-area: header;
         .hmarcas__h3 {
             color: $color6;

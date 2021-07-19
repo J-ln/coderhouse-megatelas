@@ -1,116 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Comercio de venta e instalacion de muebles y productos de decoracion para el hogar. Cortinas, sillones, productos de blanqueria."
+        />
+        <meta
+            name="keywords"
+            content="Cortinas, Sillones, Telas, Tapizados, Blanqueria, Decoracion"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
+        <title>Megatelas - Trabajos de Decoracion</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comercio de venta e instalacion de muebles y productos de decoracion para el hogar. Cortinas, sillones, productos de blanqueria.">
-    <meta name="keywords" content="Cortinas, Sillones, Telas, Tapizados, Blanqueria, Decoracion">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <title>Megatelas - Trabajos de Decoracion</title>
-</head>
-
-<body>
-
-    <header class="navBar fontR medium">
-
-        <div class="navLogo">
-            <a href="index.html"><img class="logoImg" src="media/images/logoNav.png" alt="Logo de nuestro comerico"></a>
-        </div>
-
-        <div class="navButtons" id="mobileMenu">
-
-            <input type="checkbox">
-            <div class="hamIcon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="navbar__list" id="deskMenu">
-                <li><a href="../index.html">Home</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="productos.html">Productos</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="sucursal.html">Sucursal</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="galeria.html">Galeria</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="contacto.html">Contacto</a></li>
-            </ul>
-        </div>
-
-    </header>
-
-    <div class="block block--init">
-
-        <div class="block__pgalery">
-
-            <div class="pgalery__header">
-                <h1 class="pgalery__h1">Nuestros trabajos</h1>
+    <body>
+        <header class="navBar">
+            <div class="navLogo">
+                <a href="../index.html"
+                    ><img
+                        class="logoImg"
+                        src="../media/images/logoNav.png"
+                        alt="Logo de nuestro comerico"
+                /></a>
             </div>
 
-            <div class="pgalery__gcard">
-
-                <div class="gcard__imagec">
-                    <img class="gcard__image" src="../media/images/galeria/spacejoy-9hekJbWYrno-unsplash.jpg" alt="Imagenes de nuestro trabajos">
+            <div class="navButtons" id="mobileMenu">
+                <input type="checkbox" />
+                <div class="hamIcon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-
-                <div class="gcard__text">
-                    <p class="gcard__p">Trabajo de retapizado de almohadones</p>
-                    <p class="gcard__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vitae facere, et maxime ab illo neque quas a voluptatem perferendis.</p>
-                </div>
-
-            </div>
-
-            <div class="pgalery__gcard">
-
-                <div class="gcard__imagec">
-                    <img class="gcard__image" src="../media/images/galeria/spacejoy-85pCvDWDMmI-unsplash.jpg" alt="Imagenes de nuestro trabajos">
-                </div>
-
-                <div class="gcard__text">
-                    <p class="gcard__p">Cortinas y juego de sillones para sala de estar</p>
-                    <p class="gcard__p">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Quas nam dicta molestias unde doloribus cumque animi incidunt quidem vel iure!</p>
-                </div>
-            </div>
-
-            <div class="pgalery__gcard">
-
-                <div class="gcard__imagec">
-                    <img class="gcard__image" src="../media/images/galeria/spacejoy-xevVQnSSxPI-unsplash.jpg" alt="Imagenes de nuestro trabajos">
-                </div>
-
-                <div class="gcard__text">
-                    <p>Alfombra y juego de sillones</p>
-                    <p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Magni nostrum illo architecto quis possimus consectetur corporis sed voluptates officiis facilis.</p>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <footer class="backColorDarkGrey colorWhite">
-
-        <div class="footerCont">
-
-            <div class="footerInfo">
-                <p class="footerInfoTitle">Informacion de contacto</p>
-                <p class="footerInfoItem"><span>Celular</span>: 3446-111111</p>
-                <p class="footerInfoItem"><span>Email</span>: email@hotmail.com</p>
-                <p class="footerInfoItem"><span>Direccion</span>: Calle 123, Gualeguaychu, Entre Rios</p>
-            </div>
-
-            <div class="footerLinks">
-                <ul>
-                    <li>
-                        <a target="_blank" rel="external" href="https://www.facebook.com"><img src="../media/images/facebook.png" alt="Facebook"></a>
+                <ul class="navbar__list" id="deskMenu">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../index.html">Home</a>
                     </li>
-                    <li>
-                        <a target="_blank" rel="external" href="#"><img src="../media/images/whatsapp.png" alt="WhatsApp"></a>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="productos.html"
+                            >Productos</a
+                        >
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="sucursal.html"
+                            >Sucursal</a
+                        >
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="galeria.html">Galeria</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="contacto.html"
+                            >Contacto</a
+                        >
                     </li>
                 </ul>
             </div>
+        </header>
 
+        <div class="block block--init">
+            <div class="block__pgalery">
+                <div class="pgalery__header">
+                    <h1 class="pgalery__h1">Nuestros trabajos</h1>
+                </div>
+
+                <div class="pgalery__gcard">
+                    <div class="gcard__imagec">
+                        <img
+                            class="gcard__image"
+                            src="../media/images/galeria/spacejoy-9hekJbWYrno-unsplash.jpg"
+                            alt="Imagenes de nuestro trabajos"
+                        />
+                    </div>
+
+                    <div class="gcard__text">
+                        <p class="gcard__p">
+                            Trabajo de retapizado de almohadones
+                        </p>
+                        <p class="gcard__p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ex vitae facere, et maxime ab illo neque quas
+                            a voluptatem perferendis.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pgalery__gcard">
+                    <div class="gcard__imagec">
+                        <img
+                            class="gcard__image"
+                            src="../media/images/galeria/spacejoy-85pCvDWDMmI-unsplash.jpg"
+                            alt="Imagenes de nuestro trabajos"
+                        />
+                    </div>
+
+                    <div class="gcard__text">
+                        <p class="gcard__p">
+                            Cortinas y juego de sillones para sala de estar
+                        </p>
+                        <p class="gcard__p">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing,
+                            elit. Quas nam dicta molestias unde doloribus cumque
+                            animi incidunt quidem vel iure!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pgalery__gcard">
+                    <div class="gcard__imagec">
+                        <img
+                            class="gcard__image"
+                            src="../media/images/galeria/spacejoy-xevVQnSSxPI-unsplash.jpg"
+                            alt="Imagenes de nuestro trabajos"
+                        />
+                    </div>
+
+                    <div class="gcard__text">
+                        <p>Alfombra y juego de sillones</p>
+                        <p>
+                            Lorem, ipsum, dolor sit amet consectetur adipisicing
+                            elit. Magni nostrum illo architecto quis possimus
+                            consectetur corporis sed voluptates officiis
+                            facilis.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    </footer>
-</body>
+        <footer class="footer">
+            <div class="footerCont">
+                <div class="footerInfo">
+                    <p class="footerInfoTitle">Informacion de contacto</p>
+                    <p class="footerInfoItem">
+                        <span>Celular</span>: 3446-111111
+                    </p>
+                    <p class="footerInfoItem">
+                        <span>Email</span>: email@hotmail.com
+                    </p>
+                    <p class="footerInfoItem">
+                        <span>Direccion</span>: Calle 123, Gualeguaychu, Entre
+                        Rios
+                    </p>
+                </div>
+
+                <div class="footerLinks">
+                    <ul>
+                        <li>
+                            <a
+                                target="_blank"
+                                rel="external"
+                                href="https://www.facebook.com"
+                                ><img
+                                    src="../media/images/facebook.png"
+                                    alt="Facebook"
+                            /></a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="external" href="#"
+                                ><img
+                                    src="../media/images/whatsapp.png"
+                                    alt="WhatsApp"
+                            /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
