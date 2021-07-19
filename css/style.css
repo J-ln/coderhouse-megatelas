@@ -92,7 +92,7 @@
 
 @media (max-width: 720px) {
   .hproducts__container .hproducts__header {
-    margin: 0 auto 0 1rem;
+    margin-left: 2rem;
   }
 }
 
@@ -114,7 +114,7 @@
   grid-area: card;
   height: auto;
   width: 90%;
-  padding: 10vh 0;
+  padding: 7vh 0;
   margin: 0 auto;
 }
 
@@ -697,8 +697,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   width: 90%;
   margin: 0 auto;
   height: auto;
@@ -742,6 +740,7 @@
           justify-content: center;
   border-radius: 15px;
   overflow: hidden;
+  border: 3px groove #343A40;
 }
 
 .block__psucur .psucur__imagec .psucur__image {
@@ -761,7 +760,8 @@
   -webkit-column-gap: 0;
           column-gap: 0;
   border-radius: 0 15px 15px 0;
-  background-color: #ADB5BD;
+  background-color: #6C757D;
+  color: #f8f9faff;
 }
 
 @media (max-width: 720px) {
@@ -773,12 +773,12 @@
 
 .block__psucur .psucur__info .psucur__h3 {
   font-size: 1.4rem;
-  line-height: 2.5em;
+  line-height: 3em;
 }
 
 .block__psucur .psucur__info .psucur__p {
   font-size: 1rem;
-  line-height: 3em;
+  line-height: 1.5em;
 }
 
 .block__psucur .psucur__map {
@@ -869,6 +869,7 @@
   border-radius: 0 0 15px 15px;
   overflow: hidden;
   background-color: #ADB5BD;
+  border: 1px solid #343A40;
 }
 
 .block__pgalery .pgalery__gcard .gcard__imagec .gcard__image {
@@ -884,6 +885,8 @@
   margin-bottom: -1.5em;
   opacity: 0.93;
   background-color: #DEE2E6;
+  color: #343A40;
+  border: 1px solid #343A40;
 }
 
 @media (max-width: 720px) {

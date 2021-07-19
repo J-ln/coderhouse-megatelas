@@ -6,7 +6,6 @@
     row-gap: 7vh;
     justify-items: center;
     align-items: center;
-    align-content: center;
     width: 90%;
     margin: 0 auto;
     height: auto;
@@ -33,6 +32,7 @@
         justify-content: center;
         border-radius: 15px;
         overflow: hidden;
+        border: 3px groove $color6;
         .psucur__image {
             height: 100%;
             width: 100%;
@@ -46,18 +46,19 @@
         height: auto;
         column-gap: 0;
         border-radius: 0 15px 15px 0;
-        background-color: $color4;
+        background-color: $color5;
+        color: $color1;
         @media (max-width: 720px) {
             row-gap: 0;
             border-radius: 0 0 15px 15px;
         }
         .psucur__h3 {
             font-size: 1.4rem;
-            line-height: 2.5em;
+            line-height: 3em;
         }
         .psucur__p {
             font-size: 1rem;
-            line-height: 3em;
+            line-height: 1.5em;
         }
     }
     .psucur__map {

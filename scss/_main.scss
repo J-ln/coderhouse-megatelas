@@ -60,7 +60,7 @@
         grid-area: header;
         margin: 0 auto;
         @media (max-width: 720px) {
-            margin: 0 auto 0 1rem;
+            margin-left: 2rem;
         }
         .hproducts__h3 {
             color: $color1;
@@ -77,7 +77,7 @@
         grid-area: card;
         height: auto;
         width: 90%;
-        padding: 10vh 0;
+        padding: 7vh 0;
         margin: 0 auto;
         .carousel-inner {
             padding: 1em;
