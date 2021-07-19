@@ -18,18 +18,23 @@
         }
     }
     .pcontact__csocials {
-        width: 70%;
+        width: 100%;
+        margin: 0;
         height: auto;
         .csocials__list {
             display: flex;
             flex-direction: column;
             list-style-type: none;
             text-align: center;
-            width: 70%;
+            width: 80%;
+            max-width: 700px;
             margin: 7vh auto;
-            padding: 2em 0;
+            padding: 2em 1.9rem;
             border-radius: 15px;
             background-color: $color4;
+            @media (max-width: 720px) {
+                width: 90%;
+            }
         }
         .csocial__link {
             text-decoration: none;
@@ -38,27 +43,29 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            min-width: 200px;
+            max-width: 500px;
             padding: 1.5em 1rem;
-            margin: 2em 7rem;
+            margin: 2em auto;
             border: 1px groove black;
             border-radius: 15px;
             background-color: $color5;
             &.facebookbtn:hover {
-                background-color: #4267B2;
-                box-shadow: .1em .1rem 6px black;
+                background-color: #4267b2;
+                box-shadow: 0.1em 0.1rem 6px black;
             }
             &.whatsappbtn:hover {
-                background-color: #25D366;
-                box-shadow: .1em .1rem 6px black;
+                background-color: #25d366;
+                box-shadow: 0.1em 0.1rem 6px black;
             }
             &.emailbtn:hover {
-                background-color: #DB4437;
-                box-shadow: .1em .1rem 6px black;
+                background-color: #db4437;
+                box-shadow: 0.1em 0.1rem 6px black;
             }
         }
         .csocials__image {
             max-width: 80px;
-            background-color: #DEE2E6;
+            background-color: #dee2e6;
             padding: 0.5em;
             border: 5px outset lightslategrey;
             border-radius: 15px;
