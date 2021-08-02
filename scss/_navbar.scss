@@ -4,19 +4,13 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background: rgb(248, 249, 250);
-    background: linear-gradient(
-        0deg,
-        rgba(248, 249, 250, 0) 0%,
-        rgba(248, 249, 250, 0.88) 10%,
-        rgba(233, 236, 239, 0.9) 30%,
-        rgba(222, 226, 230, 1) 99%
-    );
+    background-color: $color3;
     z-index: 100;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     left: 0;
+    box-shadow: 0 0.1rem 0.1rem grey;
 }
 
 .navLogo {

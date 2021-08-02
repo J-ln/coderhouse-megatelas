@@ -4,18 +4,20 @@
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
     grid-template-areas: "header header . ." "card card card card";
-
+    @media (max-width: 720px) {
+        grid-template-areas: ".header header ." "card card card card";
+    }
     .pproducts__header {
         grid-area: header;
-        margin: 0 auto;
+        margin: 2vh auto 0;
+        @media (min-width: 720px) and (max-width: 860px) {
+            margin-left: 2vh;
+        }
         .pproducts__h1 {
+            @include sec-title;
             color: $color6;
             background-color: $color3;
-            font-size: 3rem;
-            padding: 0.2em 1rem;
-            z-index: 10;
-            border-radius: 15px;
-            border: 4px $color5 groove;
+            box-shadow: 0 0 0.4rem gray;
         }
     }
     .pproducts__slide {
@@ -23,60 +25,61 @@
         height: auto;
         width: 90%;
         margin: 0 auto;
-        .carousel-inner {
-            padding: 1rem;
-            .pproducts__pcard {
-                @include card;
-                margin: 7vh auto;
-                .pcard__imagec {
-                    width: 60%;
+        .pproducts__pcard {
+            @include card;
+            max-height: 645px;
+            margin: 5vh auto;
+            .pcard__imagec {
+                width: 60%;
+                height: 100%;
+                border-right: 2px groove gray;
+                border-bottom: none;
+                .pcard__img {
+                    width: 100%;
                     height: 100%;
-                    .pcard__img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-                .pcard__text {
-                    display: flex;
-                    flex-direction: column;
-                    width: 40%;
-                    height: 100%;
-                    text-align: center;
-                    justify-content: center;
-                    padding: 0 2rem;
-                    flex-wrap: wrap;
-                    .pcard__h3 {
-                        @include pname;
-                    }
-                    .pcard__p {
-                        @include pdesc;
-                    }
-                }
-                &.pproducts__pcard--reverse {
-                    flex-direction: row-reverse;
                 }
             }
-            @media (max-width: 720px) {
-                .pproducts__pcard {
+            .pcard__text {
+                display: flex;
+                flex-direction: column;
+                width: 40%;
+                height: 100%;
+                text-align: center;
+                justify-content: center;
+                padding: 0 2rem;
+                flex-wrap: wrap;
+                .pcard__h3 {
+                    @include pname;
+                }
+                .pcard__p {
+                    @include pdesc;
+                }
+            }
+            &.pproducts__pcard--reverse {
+                flex-direction: row-reverse;
+                .pcard__imagec {
+                    border-right: none;
+                    border-left: 2px groove gray;
+                }
+                @media (max-width: 910px) {
                     flex-direction: column;
                     .pcard__imagec {
-                        width: 100%;
-                    }
-                    .pcard__text {
-                        width: 100%;
+                        border-left: none;
                     }
                 }
             }
         }
-        .carousel-control-next,
-        .carousel-control-prev {
-            background-color: $color5;
-            width: 5rem;
-            height: 80%;
-            border-radius: 10px;
-            margin: auto auto;
-            @media (max-width: 720px) {
-                width: 40px;
+        @media (max-width: 910px) {
+            .pproducts__pcard {
+                flex-direction: column;
+                .pcard__imagec {
+                    width: 100%;
+                    border-bottom: 2px groove gray;
+                    border-right: none;
+                }
+                .pcard__text {
+                    width: 100%;
+                }
             }
         }
     }

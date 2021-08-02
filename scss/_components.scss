@@ -13,16 +13,32 @@
     max-width: 1080px;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0.2em 0.1rem 0.5rem black;
+    box-shadow: 0 0 0.5rem grey;
 }
 
 @mixin pdesc {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 @mixin pname {
     text-align: center;
     font-size: 2rem;
     font-weight: $f-black;
+}
+
+@mixin sec-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.2rem 1rem;
+    z-index: 20;
+    border-radius: 15px;
+    @media (min-width: 720px) {
+        font-size: 2.5rem;
+    }
+}
+.mid-line {
+    width: 100%;
+    border: 2px groove $color5;
 }

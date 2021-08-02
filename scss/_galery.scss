@@ -6,54 +6,56 @@
     width: 100%;
     height: auto;
     .pgalery__header {
-        margin: 0 auto;
+        margin: 1vh auto 0;
         .pgalery__h1 {
+            @include sec-title;
             color: $color6;
             background-color: $color3;
-            font-size: 3rem;
-            padding: 0.2em 1rem;
-            z-index: 10;
-            border-radius: 15px;
-            border: 4px $color5 groove;
+            box-shadow: 0 0 0.4rem grey;
         }
     }
     .pgalery__gcard {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 7vh auto;
+        margin: 2vh auto 7vh;
         height: auto;
         width: 70%;
-        border-radius: 15px;
         @media (max-width: 720px) {
-            width: 90%;
+            width: 98%;
         }
         .gcard__imagec {
-            width: 100%;
+            width: 90%;
             border-radius: 0 0 15px 15px;
             overflow: hidden;
-            background-color: $color4;
-            border: 1px solid $color6;
+            box-shadow: 0 0.1rem 0.4rem grey;
+            border-top: 3px groove $color4;
+            z-index: 15;
             .gcard__image {
                 width: 100%;
                 height: 100%;
             }
         }
         .gcard__text {
-            width: 80%;
+            width: 70%;
             text-align: center;
-            padding: 1.9em 2rem;
+            padding: 1.2rem 2rem;
             border-radius: 0 0 15px 15px;
             margin-bottom: -1.5em;
             opacity: 0.93;
-            background-color: $color2;
+            z-index: 10;
+            background-color: $color3;
             color: $color6;
-            border: 1px solid $color6;
+            box-shadow: 0 0 0.4rem grey;
             @media (max-width: 720px) {
-                width: 90%;
+                width: 80%;
             }
-            .gcard__p {
+            .gcard__title {
                 font-size: 1rem;
+                font-weight: 600;
+            }
+            .gcard__desc {
+                font-size: 0.9rem;
             }
         }
     }

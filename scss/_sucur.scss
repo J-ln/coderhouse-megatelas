@@ -1,38 +1,39 @@
 .block__psucur {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
     display: grid;
-    grid-template-areas: "header header header header" "image image info info" "map map map map";
+    grid-template-areas: ". header header ." "image image info info" "map map map map";
     grid-template-columns: 2fr 2fr 2fr 2fr;
     grid-template-rows: auto;
-    row-gap: 7vh;
     justify-items: center;
     align-items: center;
-    width: 90%;
-    margin: 0 auto;
-    height: auto;
-    @media (max-width: 720px) {
+    background-color: $color2;
+    @media (max-width: 780px) {
         grid-template-areas: "header header header header" "image image image image" "info info info info" "map map map map";
     }
     .psucur__header {
         grid-area: header;
+        margin-top: 1vh;
         .psucur__h1 {
+            @include sec-title;
             color: $color6;
             background-color: $color3;
-            font-size: 3rem;
-            padding: 0.2em 1rem;
-            z-index: 10;
-            border-radius: 15px;
-            border: 4px $color5 groove;
+            box-shadow: 0 0 0.4rem grey;
         }
     }
     .psucur__imagec {
         grid-area: image;
-        width: 100%;
+        width: 90%;
         height: auto;
-        align-items: center;
-        justify-content: center;
+        margin: 5vh auto 0;
         border-radius: 15px;
         overflow: hidden;
-        border: 3px groove $color6;
+        box-shadow: 0 0 0.5rem grey;
+        z-index: 15;
+        @media (min-width: 780px) {
+            margin-right: -5vh;
+        }
         .psucur__image {
             height: 100%;
             width: 100%;
@@ -40,45 +41,68 @@
     }
     .psucur__info {
         grid-area: info;
-        width: 100%;
-        text-align: center;
-        padding: 3.5em 2rem;
+        width: fit-content;
+        max-width: 80%;
+        margin: -2vh auto 5vh;
+        padding: 2rem 2rem;
         height: auto;
-        column-gap: 0;
-        border-radius: 0 15px 15px 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0 0 15px 15px;
+        text-align: center;
         background-color: $color5;
         color: $color1;
-        @media (max-width: 720px) {
-            row-gap: 0;
-            border-radius: 0 0 15px 15px;
+        box-shadow: 0 0 0.4rem grey;
+        @media (min-width: 480px) {
+            width: 70%;
+        }
+        @media (min-width: 780px) {
+            height: 70%;
+            width: 70vw;
+            border-radius: 0 15px 15px 0;
+            margin: 5vh auto 0;
+            margin-left: 3vh;
         }
         .psucur__h3 {
-            font-size: 1.4rem;
-            line-height: 3em;
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 2rem;
+            margin-bottom: 2rem;
         }
         .psucur__p {
             font-size: 1rem;
             line-height: 1.5em;
         }
     }
-    .psucur__map {
+    .psucur__mapsec {
         grid-area: map;
-        height: 80vh;
-        width: 70%;
-        margin-bottom: 7vh;
-        border-radius: 15px;
-        border: 10px groove #343a40;
-        @media (max-width: 720px) {
-            width: 90%;
-        }
-        .psucur__iframe {
-            display: block;
-            width: 90%;
-            height: 90%;
-            border: 3px;
-            margin: 1.5em auto;
+        width: 100%;
+        height: auto;
+        margin-top: 5vh;
+        background-color: $color4;
+        .psucur__map {
+            height: 80vh;
+            width: 70%;
+            margin: 5vh auto;
             border-radius: 15px;
-            border: 4px solid black;
+            background-color: $color2;
+            border: 4px groove $color4;
+            box-shadow: 0 0 0.4rem $color6;
+            @media (max-width: 720px) {
+                width: 90%;
+            }
+            .psucur__iframe {
+                display: block;
+                width: 90%;
+                height: 90%;
+                border: 3px;
+                margin: 1.5em auto;
+                border-radius: 15px;
+                border: 4px groove $color5;
+                box-shadow: 0 0 0.1rem grey;
+            }
         }
     }
 }
