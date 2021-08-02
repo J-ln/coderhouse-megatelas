@@ -1,13 +1,11 @@
 .footer {
+    position: relative;
     height: auto;
-    width: 100vw;
-    background: rgb(33, 37, 41);
-    background: linear-gradient(
-        0deg,
-        rgba(33, 37, 41, 1) 19%,
-        rgba(52, 58, 64, 1) 63%,
-        rgba(73, 80, 87, 1) 100%
-    );
+    width: 100%;
+    background-color: $color6;
+    overflow: visible;
+    box-shadow: 0 -0.1rem 0.3rem black;
+    z-index: 30;
     .footerCont {
         height: 100%;
         width: 100%;
@@ -15,34 +13,65 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: 480) {
+            margin: auto -4vw;
+        }
         .footerInfo {
+            padding: 1rem;
             color: $color3;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            box-shadow: 0 0 0.3rem black;
             align-self: flex-start;
             text-align: center;
             font-size: 18px;
-            margin: 3em;
+            margin: 3em 2vw 3em 8vw;
             max-width: 50%;
+            @media (max-width: 480px) {
+                margin-left: 5vw;
+            }
+            .footerBr {
+                margin: -2vh auto 05vh;
+                width: 70%;
+                border: 2px groove $color1;
+                border-radius: 15px;
+            }
             .footerInfoTitle {
                 font-size: 1.5rem;
                 font-weight: $f-black;
                 padding-bottom: 1em;
             }
             .footerInfoItem {
+                margin: 0 auto 2vh;
                 padding-bottom: 0.3em;
+                max-width: 60%;
+                color: $color4;
+                @media (max-width: 580px) {
+                    max-width: 100%;
+                }
             }
-            span {
+            .footerBoldt {
                 font-weight: bold;
+                color: $color3;
             }
         }
         .footerLinks {
+            margin-right: 8vw;
             max-width: 50%;
-            ul {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            box-shadow: 0 0 0.3rem black;
+            padding: 1.5rem 0;
+            @media (max-width: 480px) {
+                margin-right: 5vw !important;
+            }
+            .footerList {
                 list-style-type: none;
             }
-            li {
+            .footerListItem {
                 margin: 2em;
             }
-            img {
+            .footerIcon {
                 max-width: 60px;
                 background-color: #dee2e6;
                 padding: 0.5em;

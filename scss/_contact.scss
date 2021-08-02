@@ -7,7 +7,7 @@
     height: auto;
     background-color: $color2;
     .pcontact__header {
-        margin: 1vh auto 0;
+        margin: 2vh auto 0;
         .pcontact__h1 {
             @include sec-title;
             color: $color1;
@@ -27,11 +27,11 @@
             height: auto;
             width: 80%;
             max-width: 700px;
-            margin: 7vh auto;
+            margin: 5vh auto;
             padding: 2em 1.9rem;
             border-radius: 15px;
-            background-color: $color4;
-            border: 2px groove $color4;
+            background-color: $color5;
+            border: 2px groove $color5;
             box-shadow: 0 0 0.5rem grey;
             @media (max-width: 720px) {
                 width: 90%;
@@ -50,18 +50,19 @@
             margin: 2rem auto;
             border: 3px groove $color5;
             border-radius: 15px;
-            background-color: $color5;
+            background-color: $color6;
+            box-shadow: 0 0 0.2rem black;
             &.facebookbtn:hover {
                 background-color: #4267b2;
-                box-shadow: 0 0 0.3rem black;
+                box-shadow: 0 0 0.4rem black;
             }
             &.whatsappbtn:hover {
                 background-color: #25d366;
-                box-shadow: 0 0 0.3rem black;
+                box-shadow: 0 0 0.4rem black;
             }
             &.emailbtn:hover {
                 background-color: #db4437;
-                box-shadow: 0 0 0.3rem black;
+                box-shadow: 0 0 0.4rem black;
             }
         }
         .csocials__image {
@@ -74,7 +75,9 @@
         .csocials__p {
             height: 100%;
             width: 50%;
-            color: white;
+            color: $color3;
+            text-shadow: 0 0 0.1rem black;
+            font-weight: $f-black;
             font-size: 1.4rem;
             letter-spacing: 0.1rem;
         }

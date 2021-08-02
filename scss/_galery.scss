@@ -5,13 +5,32 @@
     justify-content: center;
     width: 100%;
     height: auto;
+    background-color: $color2;
     .pgalery__header {
-        margin: 1vh auto 0;
+        margin: 2vh auto 3vh;
         .pgalery__h1 {
             @include sec-title;
-            color: $color6;
-            background-color: $color3;
-            box-shadow: 0 0 0.4rem grey;
+            padding: 0.6rem 1rem;
+            color: $color2;
+            text-shadow: 0 0 0.05rem black;
+            background-color: $color5;
+            box-shadow: 0 0 0.3rem $color6;
+            border: 2px groove $color5;
+        }
+    }
+    .pgalery__sec {
+        width: 100%;
+        &.sec--1 {
+            background-color: $color2;
+        }
+        &.sec--2 {
+            background-color: $color6;
+        }
+        &.sec--3 {
+            background-color: $color2;
+        }
+        &.sec--4 {
+            background-color: $color4;
         }
     }
     .pgalery__gcard {
@@ -20,7 +39,7 @@
         align-items: center;
         margin: 2vh auto 7vh;
         height: auto;
-        width: 70%;
+        width: 60%;
         @media (max-width: 720px) {
             width: 98%;
         }
@@ -34,6 +53,12 @@
             .gcard__image {
                 width: 100%;
                 height: 100%;
+            }
+            .carousel-control-next,
+            .carousel-control-prev {
+                background-color: $color4;
+                width: 5vw;
+                min-width: 40px;
             }
         }
         .gcard__text {
@@ -51,11 +76,10 @@
                 width: 80%;
             }
             .gcard__title {
-                font-size: 1rem;
-                font-weight: 600;
+                @include font-title;
             }
             .gcard__desc {
-                font-size: 0.9rem;
+                @include font-desc;
             }
         }
     }

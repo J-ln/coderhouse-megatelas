@@ -25,9 +25,6 @@ body {
 .block {
     width: 100%;
     height: auto;
-    &.block--init {
-        padding-top: 0;
-    }
     .block__hero {
         background-color: $color1;
     }
@@ -37,7 +34,4 @@ body {
     .block__hmarcas {
         background-color: $color5;
     }
-}
-.block--init {
-    padding-top: 14vh;
 }

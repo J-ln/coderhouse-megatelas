@@ -14,7 +14,7 @@
     }
     .psucur__header {
         grid-area: header;
-        margin-top: 1vh;
+        margin-top: 2vh;
         .psucur__h1 {
             @include sec-title;
             color: $color6;
@@ -27,23 +27,29 @@
         width: 90%;
         height: auto;
         margin: 5vh auto 0;
+        padding: 1rem;
         border-radius: 15px;
         overflow: hidden;
-        box-shadow: 0 0 0.5rem grey;
-        z-index: 15;
+        box-shadow: 0 0 0.3rem black;
+        border: 2px groove $color5;
+        background-color: $color6;
+        z-index: 30;
         @media (min-width: 780px) {
             margin-right: -5vh;
         }
         .psucur__image {
             height: 100%;
             width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 0.45rem $color6;
         }
     }
     .psucur__info {
         grid-area: info;
         width: fit-content;
-        max-width: 80%;
-        margin: -2vh auto 5vh;
+        max-width: 75%;
+        margin: -1.9vh auto 5vh;
         padding: 2rem 2rem;
         height: auto;
         z-index: 10;
@@ -53,8 +59,9 @@
         border-radius: 0 0 15px 15px;
         text-align: center;
         background-color: $color5;
-        color: $color1;
-        box-shadow: 0 0 0.4rem grey;
+        color: $color3;
+        border: 2px groove $color5;
+        box-shadow: 0 0 0.4rem black;
         @media (min-width: 480px) {
             width: 70%;
         }
@@ -65,15 +72,24 @@
             margin: 5vh auto 0;
             margin-left: 3vh;
         }
-        .psucur__h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            line-height: 2rem;
-            margin-bottom: 2rem;
+        .psucur__textbg {
+            @include font-title;
+            margin-bottom: 1.5em;
+            color: $color1;
+            text-shadow: 0 0 0.15rem black;
+            border-bottom: 4px groove $color4;
+            @media (max-width: 720px) {
+                font-size: 1.5rem;
+            }
         }
-        .psucur__p {
-            font-size: 1rem;
-            line-height: 1.5em;
+        .psucur__textsm {
+            @include font-desc;
+            @media (max-width: 720px) {
+                font-size: 1.1rem;
+            }
+            .psucur__textb {
+                font-weight: $f-black;
+            }
         }
     }
     .psucur__mapsec {
@@ -82,14 +98,15 @@
         height: auto;
         margin-top: 5vh;
         background-color: $color4;
+        border-top: 1px solid black;
         .psucur__map {
             height: 80vh;
             width: 70%;
             margin: 5vh auto;
             border-radius: 15px;
-            background-color: $color2;
-            border: 4px groove $color4;
-            box-shadow: 0 0 0.4rem $color6;
+            background-color: $color6;
+            border: 3px groove $color4;
+            box-shadow: 0 0 0.3rem $color6;
             @media (max-width: 720px) {
                 width: 90%;
             }
@@ -100,7 +117,7 @@
                 border: 3px;
                 margin: 1.5em auto;
                 border-radius: 15px;
-                border: 4px groove $color5;
+                border: 3px groove $color4;
                 box-shadow: 0 0 0.1rem grey;
             }
         }

@@ -16,15 +16,29 @@
     box-shadow: 0 0 0.5rem grey;
 }
 
-@mixin pdesc {
-    text-align: center;
+@mixin font-title {
     font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    font-weight: $f-black;
+    @media (min-width: 720px) {
+        font-size: 1.5rem;
+    }
+    @media (min-width: 1080px) {
+        font-size: 1.8rem;
+    }
 }
 
-@mixin pname {
+@mixin font-desc {
+    font-size: 0.9rem;
     text-align: center;
-    font-size: 2rem;
-    font-weight: $f-black;
+    font-weight: $f-reg;
+    @media (min-width: 720px) {
+        font-size: 1rem;
+    }
+    @media (min-width: 1080px) {
+        font-size: 1.2rem;
+    }
 }
 
 @mixin sec-title {

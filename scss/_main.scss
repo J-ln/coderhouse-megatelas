@@ -2,6 +2,7 @@
     width: 100%;
     height: 90vh;
     display: grid;
+    padding-top: 1vh;
     padding-bottom: 5vh;
     grid-template-columns: repeat(4, 2fr);
     grid-template-areas: ". . header header" "image image image image" "desc desc desc desc";
@@ -63,8 +64,7 @@
         box-shadow: 0.1em 0.2rem 0.3rem gray;
         background-color: $color2;
         .hero__p {
-            font-size: 1rem;
-            text-align: center;
+            @include font-desc;
         }
     }
     .carousel-control-next,
@@ -86,7 +86,7 @@
     grid-template-columns: 2fr 2fr 2fr 2fr;
     grid-template-areas: "header header . ." "card card card card";
     @media (max-width: 520px) {
-        grid-template-areas: ". header header ." "card card card card";
+        grid-template-areas: "header header header header" "card card card card";
     }
     .hproducts__header {
         grid-area: header;
@@ -94,8 +94,8 @@
             @include sec-title;
             position: absolute;
             margin: 0 0 0 10%;
-            background-color: $color4;
-            color: $color1;
+            background-color: $color5;
+            color: $color3;
             box-shadow: 0 0 0.2rem black;
             text-shadow: 0 0 0.1rem grey;
             @media (max-width: 520px) {
@@ -139,10 +139,14 @@
                     justify-content: center;
                     padding: 1.5em 1.5rem;
                     .hproducts__name {
-                        @include pname;
+                        @include font-title;
+                        border-bottom: 3px groove $color5;
+                        color: $color6;
+                        padding-bottom: 1rem;
                     }
                     .hproducts__desc {
-                        @include pdesc;
+                        @include font-desc;
+                        color: $color5;
                     }
                 }
             }
@@ -186,14 +190,15 @@
     height: auto;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-template-areas: ". header header ." "img img img img";
+    grid-template-areas: "header header header header" "img img img img";
     .hmarcas__header {
         grid-area: header;
+        margin: 0 auto;
         .hmarcas__h3 {
             @include sec-title;
-            color: $color1;
-            background-color: $color4;
-            text-shadow: 0 0 0.2rem grey;
+            display: inline-block;
+            color: $color3;
+            background-color: $color6;
             border: 2px $color6 solid;
             box-shadow: 0 0 0.2rem $color6;
         }

@@ -4,31 +4,65 @@
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
     grid-template-areas: "header header . ." "card card card card";
+    background-color: $color4;
     @media (max-width: 720px) {
         grid-template-areas: ".header header ." "card card card card";
     }
     .pproducts__header {
         grid-area: header;
         margin: 2vh auto 0;
+        padding-bottom: 2vh;
+        z-index: 20;
         @media (min-width: 720px) and (max-width: 860px) {
             margin-left: 2vh;
         }
         .pproducts__h1 {
             @include sec-title;
-            color: $color6;
-            background-color: $color3;
-            box-shadow: 0 0 0.4rem gray;
+            color: $color3;
+            text-shadow: 0 0 0.1rem $color6;
+            background-color: $color5;
+            box-shadow: 0 0 0.4rem $color6;
+            border: 2px groove $color5;
         }
     }
-    .pproducts__slide {
+    .pproducts__cardscont {
         grid-area: card;
         height: auto;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
+        .pproducts__cardbackg {
+            width: 100%;
+            height: auto;
+            padding: 2.5vh 0;
+            border-bottom: 1px black solid;
+            &.sec--1 {
+                background-color: $color4;
+            }
+            &.sec--2 {
+                background-color: $color2;
+            }
+            &.sec--3 {
+                background-color: $color4;
+            }
+            &.sec--4 {
+                background-color: $color2;
+            }
+            &.sec--5 {
+                background-color: $color4;
+            }
+            &.sec--6 {
+                background-color: $color2;
+            }
+            &.sec--7 {
+                background-color: $color4;
+                border-bottom: none;
+            }
+        }
         .pproducts__pcard {
             @include card;
             max-height: 645px;
-            margin: 5vh auto;
+            margin: 0 auto;
+            background-color: $color3;
             .pcard__imagec {
                 width: 60%;
                 height: 100%;
@@ -49,10 +83,14 @@
                 padding: 0 2rem;
                 flex-wrap: wrap;
                 .pcard__h3 {
-                    @include pname;
+                    @include font-title;
+                    border-bottom: 3px groove $color5;
+                    color: $color6;
+                    padding-bottom: 1em;
                 }
                 .pcard__p {
-                    @include pdesc;
+                    @include font-desc;
+                    color: $color5;
                 }
             }
             &.pproducts__pcard--reverse {
