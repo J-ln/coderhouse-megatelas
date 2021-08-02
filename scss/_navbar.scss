@@ -1,5 +1,5 @@
 .navBar {
-    height: 18vh;
+    height: 14vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -36,6 +36,7 @@
     .navbar__list {
         padding: 1em;
         list-style-type: none;
+        margin: 0 auto;
     }
     .navbar__item {
         display: inline-block;

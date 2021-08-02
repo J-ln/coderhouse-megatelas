@@ -380,7 +380,7 @@
 }
 
 .navBar {
-  height: 18vh;
+  height: 14vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -442,6 +442,7 @@
 .navButtons .navbar__list {
   padding: 1em;
   list-style-type: none;
+  margin: 0 auto;
 }
 
 .navButtons .navbar__item {
