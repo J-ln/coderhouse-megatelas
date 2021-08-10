@@ -5,73 +5,73 @@
     justify-content: center;
     width: 100%;
     height: auto;
-    background-color: $color2;
+    background-color: $lightgrey;
     .pgalery__header {
         margin: 2vh auto 3vh;
         .pgalery__h1 {
             @include sec-title;
             padding: 0.6rem 1rem;
-            color: $color2;
+            border: 2px groove $darkgrey;
+            background-color: $darkgrey;
+            box-shadow: 0 0 0.3rem $plusdarkgrey;
+            color: $lightgrey;
             text-shadow: 0 0 0.05rem black;
-            background-color: $color5;
-            box-shadow: 0 0 0.3rem $color6;
-            border: 2px groove $color5;
         }
     }
     .pgalery__sec {
         width: 100%;
         &.sec--1 {
-            background-color: $color2;
+            background-color: $lightgrey;
         }
         &.sec--2 {
-            background-color: $color6;
+            background-color: $plusdarkgrey;
         }
         &.sec--3 {
-            background-color: $color2;
+            background-color: $lightgrey;
         }
         &.sec--4 {
-            background-color: $color4;
+            background-color: $grey;
         }
     }
     .pgalery__gcard {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 2vh auto 7vh;
-        height: auto;
         width: 60%;
+        height: auto;
+        margin: 2vh auto 7vh;
         @media (max-width: 720px) {
             width: 98%;
         }
         .gcard__imagec {
-            width: 90%;
-            border-radius: 0 0 15px 15px;
-            overflow: hidden;
-            box-shadow: 0 0.1rem 0.4rem grey;
-            border-top: 3px groove $color4;
             z-index: 15;
+            width: 90%;
+            overflow: hidden;
+            border-top: 3px groove $grey;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 0.1rem 0.4rem grey;
             .gcard__image {
                 width: 100%;
                 height: 100%;
             }
             .carousel-control-next,
             .carousel-control-prev {
-                background-color: $color4;
                 width: 5vw;
                 min-width: 40px;
+                background-color: $grey;
             }
         }
         .gcard__text {
+            z-index: 10;
             width: 70%;
-            text-align: center;
+            margin-bottom: -1.5em;
             padding: 1.2rem 2rem;
             border-radius: 0 0 15px 15px;
-            margin-bottom: -1.5em;
             opacity: 0.93;
-            z-index: 10;
-            background-color: $color3;
-            color: $color6;
+            background-color: $softwhite;
             box-shadow: 0 0 0.4rem grey;
+            color: $plusdarkgrey;
+            text-align: center;
             @media (max-width: 720px) {
                 width: 80%;
             }

@@ -8,30 +8,14 @@
 @import "sucur";
 @import "galery";
 @import "contact";
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-html {
-    width: 100%;
 }
 body {
+    background-color: $softwhite;
     font-family: $fuente;
     font-weight: $f-reg;
-    background-color: $color3;
-}
-
-.block {
-    width: 100%;
-    height: auto;
-    .block__hero {
-        background-color: $color1;
-    }
-    .block__hproducts {
-        background-color: $color3;
-    }
-    .block__hmarcas {
-        background-color: $color5;
-    }
 }

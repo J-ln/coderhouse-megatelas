@@ -5,34 +5,34 @@
     justify-content: center;
     width: 100%;
     height: auto;
-    background-color: $color2;
+    background-color: $lightgrey;
     .pcontact__header {
         margin: 2vh auto 0;
         .pcontact__h1 {
             @include sec-title;
-            color: $color1;
-            background-color: $color6;
+            background-color: $plusdarkgrey;
             box-shadow: 0 0 0.5rem grey;
+            color: $white;
         }
     }
     .pcontact__csocials {
         width: 100%;
-        margin: 0;
         height: auto;
+        margin: 0;
         .csocials__list {
             display: flex;
             flex-direction: column;
-            list-style-type: none;
-            text-align: center;
-            height: auto;
             width: 80%;
             max-width: 700px;
+            height: auto;
             margin: 5vh auto;
             padding: 2em 1.9rem;
+            list-style-type: none;
+            border: 2px groove $darkgrey;
             border-radius: 15px;
-            background-color: $color5;
-            border: 2px groove $color5;
+            background-color: $darkgrey;
             box-shadow: 0 0 0.5rem grey;
+            text-align: center;
             @media (max-width: 720px) {
                 width: 90%;
             }
@@ -42,15 +42,15 @@
         }
         .csocials__item {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             min-width: 200px;
             max-width: 500px;
-            padding: 1rem;
             margin: 2rem auto;
-            border: 3px groove $color5;
+            padding: 1rem;
+            border: 3px groove $darkgrey;
             border-radius: 15px;
-            background-color: $color6;
+            background-color: $plusdarkgrey;
             box-shadow: 0 0 0.2rem black;
             &.facebookbtn:hover {
                 background-color: #4267b2;
@@ -67,19 +67,19 @@
         }
         .csocials__image {
             max-width: 80px;
-            background-color: #dee2e6;
             padding: 0.5em;
             border: 5px outset lightslategrey;
             border-radius: 15px;
+            background-color: #dee2e6;
         }
         .csocials__p {
-            height: 100%;
             width: 50%;
-            color: $color3;
-            text-shadow: 0 0 0.1rem black;
-            font-weight: $f-black;
+            height: 100%;
+            color: $softwhite;
             font-size: 1.4rem;
+            font-weight: $f-black;
             letter-spacing: 0.1rem;
+            text-shadow: 0 0 0.1rem black;
         }
     }
 }
